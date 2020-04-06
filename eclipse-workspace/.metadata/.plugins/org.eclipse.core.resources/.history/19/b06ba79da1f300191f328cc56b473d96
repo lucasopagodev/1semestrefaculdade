@@ -1,0 +1,9 @@
+
+public class Acerto {
+public static void main(String[] args) {
+	int palpite = 0;
+	int numero = 0;
+	int tentativa = 0;
+	
+}
+}

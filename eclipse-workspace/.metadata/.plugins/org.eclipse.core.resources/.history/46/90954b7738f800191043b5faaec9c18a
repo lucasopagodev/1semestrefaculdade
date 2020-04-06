@@ -1,0 +1,23 @@
+package negocio;
+
+public class UF {
+	private String sigla = "";
+
+	public UF() {
+		super();
+	}
+
+	public UF(String sigla) {
+		super();
+		this.sigla = sigla;
+	}
+
+	public String getSigla() {
+		return sigla;
+	}
+
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
+	}
+	
+}

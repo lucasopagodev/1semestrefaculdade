@@ -1,0 +1,63 @@
+package apresentacao;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+
+//import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+//import javax.swing.JPanel;
+
+public class JanelaPrincipalCal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	private JPanel objPainel = new JPanel();
+	private JTextField txtNr1 = new JTextField();
+	private JTextField txtNr2 = new JTextField();
+	private JLabel lblNumero = new JLabel();
+	private JLabel lblOperacao = new JLabel();
+	private JLabel lblInterrogacao = new JLabel();
+	
+	
+	
+	public static void main(String[] args) {
+		new JanelaPrincipalCal().setVisible(true);
+	}
+	
+	public JanelaPrincipalCal() {
+		setTitle("Calculadora");
+		setSize(450, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setIcon();
+		
+		objPainel.setLayout(null);
+		getContentPane().add(objPainel);
+		objPainel.setBackground(Color.white);
+		
+		lblNumero.setText("Número");
+		lblNumero.setBounds(185, 80, 100, 20);
+		objPainel.add(lblNumero);
+		
+		lblInterrogacao.setText("?");
+		lblInterrogacao.setBounds(210, 100, 100, 20);
+		objPainel.add(lblInterrogacao);
+		
+		txtNr1.setBounds(120, 120, 50, 30);
+		objPainel.add(txtNr1);
+		
+		txtNr2.setBounds(250, 120, 50, 30);
+		objPainel.add(txtNr2);
+		
+		lblOperacao.setText("Operação");
+		lblOperacao.setBounds(80, 200, 100, 20);
+		objPainel.add(lblOperacao);
+		
+	}
+	
+	//Metodo para colocar icone na janela.
+	private void setIcon() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("IconCalculadora.png")));
+	}
+}

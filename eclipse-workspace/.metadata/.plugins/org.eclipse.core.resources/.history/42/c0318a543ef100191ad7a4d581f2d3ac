@@ -1,0 +1,49 @@
+package apresentacao;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Janela extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	//Propriedades da Classe/ Controles da Classe
+	private JPanel objPainel = new JPanel();
+	private JButton btnSair = new JButton();
+	private JLabel lblNome = new JLabel();
+	private JLabel lblEndereco = new JLabel();
+	private JTextField txtNome = new JTextField();
+	private JTextField txtEndereco = new JTextField();
+	
+	public static void main(String[] args) {
+		new Janela().setVisible(true);
+	}
+	public Janela() {
+		setTitle("Janela de teste de Botões");
+		setSize(800,600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		objPainel.setLayout(null); //Painel com controle do programador
+		getContentPane().add(objPainel); //Colocando o painel na janela
+		
+		btnSair.setText("Sair");
+		btnSair.setBounds(650, 500, 100, 30);
+		btnSair.addActionListener(new AcaoSair());
+		objPainel.add(btnSair);
+		
+		lblNome.setText("Nome");
+		lblNome.setBounds(30, 30, 100, 20);
+		objPainel.add(lblNome);
+		
+		
+		txtNome.setBounds(30, 50, 300, 20);
+		objPainel.add(txtNome);
+		
+		lblEndereco.setText("Endereço");
+		lblEndereco.setBounds(30, 80, 100, 20);
+		objPainel.add(lblEndereco);
+	}
+}

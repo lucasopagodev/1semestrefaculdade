@@ -1,0 +1,46 @@
+package apresentacao;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class JanelaPrincipal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	private JMenuBar barraDeMenu = new JMenuBar();
+	private JMenu menuCarro = new JMenu("Veículo");
+	private JMenuItem itemCadastrar = new JMenuItem("Cadastrar");
+	private JMenuItem itemPesquisarPendentes = new JMenuItem("Pesquisar Pendentes");
+	private JMenuItem itemPesquisarFinalizados = new JMenuItem("Pesquisar Finalizados");
+	private JMenuItem itemConsultar = new JMenuItem("Consultar");
+	private JMenu sair = new JMenu("Sair");
+	private JMenuItem itemSair = new JMenuItem("Sair");
+	
+	
+	
+	public static void main(String[] args) {
+		new JanelaPrincipal().setVisible(true);
+	}
+	
+	public JanelaPrincipal() {
+		setTitle("Sistema de Veículos");
+		setSize(800, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		setJMenuBar(barraDeMenu);
+		barraDeMenu.add(menuCarro);
+		menuCarro.add(itemCadastrar);
+		menuCarro.add(itemPesquisarPendentes);
+		menuCarro.add(itemPesquisarFinalizados);
+		menuCarro.add(itemConsultar);
+		
+		barraDeMenu.add(sair);
+		sair.add(itemSair);
+		itemSair.addActionListener(new AcaoSair());
+	}
+	
+	
+	
+}

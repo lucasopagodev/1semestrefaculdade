@@ -1,0 +1,20 @@
+package apresentacao;
+
+import javax.swing.JFrame;
+
+public class JanelaPrincipalCal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	public static void main(String[] args) {
+		JanelaPrincipalCal objeto = new JanelaPrincipalCal();
+		objeto.setVisible(true);
+	}
+	
+	public JanelaPrincipalCal() {
+		setTitle("Calculadora");
+		setSize(340, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+	}
+	
+}

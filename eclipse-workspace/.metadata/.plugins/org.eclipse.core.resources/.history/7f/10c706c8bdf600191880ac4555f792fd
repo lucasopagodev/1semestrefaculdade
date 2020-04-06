@@ -1,0 +1,6 @@
+package negocio;
+
+public class UF {
+	private String sigla = "";
+	
+}

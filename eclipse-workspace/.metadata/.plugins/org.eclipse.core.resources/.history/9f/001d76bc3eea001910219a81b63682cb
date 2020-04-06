@@ -1,0 +1,18 @@
+package apresentacao;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class Painel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
+	public void paint(Graphics g) {
+		g.setColor(Color.BLUE);
+		g.drawRect(10, 10, 100, 100);
+		g.setColor(Color.black);
+		//g.fillOval(200, 200, 300, 300);
+		g.drawString("Boa Noite Pâmela!! =P", 400, 300);
+	}
+}

@@ -1,0 +1,34 @@
+package apresentacao;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class JanelaPrincipal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	private JMenuBar barraDeMenu = new JMenuBar();
+	private JMenu menuCarro = new JMenu();
+	private JMenuItem itemCadastrar = new JMenuItem();
+		
+	
+	public static void main(String[] args) {
+		new JanelaPrincipal().setVisible(true);
+	}
+	
+	public JanelaPrincipal() {
+		setTitle("Sistema de Veículos");
+		setSize(800, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		setJMenuBar(barraDeMenu);
+		barraDeMenu.add(menuCarro);
+		menuCarro.add(itemCadastrar);
+		
+	}
+	
+	
+	
+}

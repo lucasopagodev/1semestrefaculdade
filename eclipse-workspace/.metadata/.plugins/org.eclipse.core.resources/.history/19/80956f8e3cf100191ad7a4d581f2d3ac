@@ -1,0 +1,32 @@
+package apresentacao;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Janela extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	//Propriedades da Classe/ Controles da Classe
+	private JPanel objPainel = new JPanel();
+	private JButton btnSair = new JButton();
+	
+	public static void main(String[] args) {
+		new Janela().setVisible(true);
+	}
+	public Janela() {
+		setTitle("Janela de teste de Botões");
+		setSize(800,600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		objPainel.setLayout(null); //Painel com controle do programador
+		getContentPane().add(objPainel); //Colocando o painel na janela
+		
+		btnSair.setText("Sair");
+		btnSair.setBounds(600, 450, 100, 30);
+		btnSair.addActionListener(new AcaoSair());
+		objPainel.add(btnSair);
+		
+	}
+}

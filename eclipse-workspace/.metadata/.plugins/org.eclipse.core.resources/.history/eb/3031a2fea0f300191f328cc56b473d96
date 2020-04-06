@@ -1,0 +1,96 @@
+package apresentacao;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class JanelaPrincipalCal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	private JPanel objPainel = new JPanel();
+	private JTextField txtNr1 = new JTextField();
+	private JTextField txtNr2 = new JTextField();
+	private JTextField txtResultado = new JTextField();
+	private JLabel lblNumero = new JLabel();
+	private JLabel lblOperacao = new JLabel();
+	private JLabel lblInterrogacao = new JLabel();
+	private JLabel lblIgual = new JLabel();
+	private JButton btnSomar = new JButton();
+	private JButton btnSubtrair = new JButton();
+	private JButton btnMultiplicar = new JButton();
+	private JButton btnDividir = new JButton();
+	
+	
+	
+	public static void main(String[] args) {
+		new JanelaPrincipalCal().setVisible(true);
+	}
+	
+	public JanelaPrincipalCal() {
+		
+		setTitle("Calculadora");
+		setSize(450, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setIcon();
+		
+		objPainel.setLayout(null);
+		getContentPane().add(objPainel);
+		objPainel.setBackground(Color.DARK_GRAY);
+		
+		lblNumero.setText("Número");
+		lblNumero.setBounds(190, 80, 100, 20);
+		objPainel.add(lblNumero);
+		
+		txtNr1.setBounds(90, 120, 50, 30);
+		objPainel.add(txtNr1);
+		
+		lblInterrogacao.setText("?");
+		lblInterrogacao.setBounds(160, 125, 100, 20);
+		objPainel.add(lblInterrogacao);
+		
+		txtNr2.setBounds(190, 120, 50, 30);
+		objPainel.add(txtNr2);
+		
+		lblIgual.setText("=");
+		lblIgual.setBounds(260, 125, 100, 20);
+		objPainel.add(lblIgual);
+		
+		txtResultado.setBounds(290, 120, 50, 30);
+		objPainel.add(txtResultado);
+		
+		lblOperacao.setText("Operação");
+		lblOperacao.setBounds(80, 200, 100, 20);
+		objPainel.add(lblOperacao);
+		
+		btnSomar.setText("Somar");
+		btnSomar.setBounds(18, 230, 100, 30);
+		btnSomar.addActionListener(new AcaoSomar(txtNr1, txtNr2, txtResultado));
+		objPainel.add(btnSomar);
+		
+		btnSubtrair.setText("Subtrair");
+		btnSubtrair.setBounds(118, 230, 100, 30);
+		btnSubtrair.addActionListener(new AcaoSubtrair(txtNr1, txtNr2, txtResultado));
+		objPainel.add(btnSubtrair);
+		
+		btnMultiplicar.setText("Multiplicar");
+		btnMultiplicar.setBounds(218, 230, 100, 30);
+		btnMultiplicar.addActionListener(new AcaoMultiplicar(txtNr1, txtNr2, txtResultado));
+		objPainel.add(btnMultiplicar);
+		
+		btnDividir.setText("Dividir");
+		btnDividir.setBounds(318, 230, 100, 30);
+		//btnDividir.addActionListener(new AcaoDividir(txtNr1, txtNr2, txtResultado));
+		objPainel.add(btnDividir);
+		
+	}
+	
+	//Metodo para colocar icone na janela.
+	private void setIcon() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("IconCalculadora.png")));
+	}
+}

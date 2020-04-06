@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Calculadora {
+	public static void main (String args[]) throws Exception {
+		float op1 = 0;
+		float op2 = 0;
+		float res = 0;
+		String leitor = "";
+		
+		System.out.print("Digite o primeiro numero: ");
+		leitor = (new BufferedReader(new InputStreamReader(System.in))).readLine();
+		op1 = Float.parseFloat(leitor);
+		
+		System.out.print("Digite o segundo numero: ");
+		leitor = (new BufferedReader(new InputStreamReader(System.in))).readLine();
+		op2 = Float.parseFloat(leitor);
+		
+		res = op1 + op2;
+		System.out.println("A soma dos numeros e: " + res);
+		
+		res = op1 - op2;
+		System.out.println("A subtração dos numeros e: " + res);
+		
+		res = op1 * op2;
+		System.out.println("A multiplicação dos numeros e: " + res);
+		
+		res = op1 / op2;
+		System.out.println("A divisão dos numeros e: " + res);
+		
+		res = op1 % op2;
+		System.out.println("A congruencia modulo dos numeros e: " + res);
+	}
+}

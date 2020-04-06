@@ -1,0 +1,32 @@
+package apresentacao;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class AcaoSomar implements ActionListener{
+	private JTextField txtNumero1 = null;
+	private JTextField txtNumero2 = null;
+	private JTextField txtResultado = null;
+	
+	public AcaoSomar(JTextField txtNumero1, JTextField txtNumero2, JTextField txtResultado) {
+		super();
+		this.txtNumero1 = txtNumero1;
+		this.txtNumero2 = txtNumero2;
+		this.txtResultado = txtResultado;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		try {
+			int origem1 = Integer.parseInt(txtNumero1.getText());;
+			int origem2 = Integer.parseInt(txtNumero2.getText());
+			txtResultado.setText(" " + (origem1 + origem2));
+		} catch (Exception erro){ 
+			JOptionPane.showMessageDialog(null, "ERRO!\n" + erro);
+		}
+		
+	}
+
+}

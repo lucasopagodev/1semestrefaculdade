@@ -1,0 +1,34 @@
+package apresentacao;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+public class Janela extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	private JPanel objPainel = new JPanel();
+	
+	private JLabel nome = new JLabel();
+	private JTextField txtNome = new JTextField();
+	
+	private JLabel sexo = new JLabel();
+	private JRadioButton rbtMasculino = new JRadioButton("Masculino");
+	private JRadioButton rbtFeminino = new JRadioButton("Feminino");
+	
+	private JLabel endereco = new JLabel();
+	private JTextField txtEndereco = new JTextField();
+	
+	private JLabel UF = new JLabel();
+	private JComboBox<String> cboUF = new JComboBox<String>();
+	
+	
+	
+	public static void main(String[] args) {
+		new Janela().setVisible(true);
+	}
+	
+}

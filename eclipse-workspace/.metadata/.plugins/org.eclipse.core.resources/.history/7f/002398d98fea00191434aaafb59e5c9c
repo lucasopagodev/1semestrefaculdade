@@ -1,0 +1,10 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class Tela extends JFrame {
+	private static final long serialVersionUID = 1L;
+	Tela objeto = new Tela();
+	
+	
+	
+}

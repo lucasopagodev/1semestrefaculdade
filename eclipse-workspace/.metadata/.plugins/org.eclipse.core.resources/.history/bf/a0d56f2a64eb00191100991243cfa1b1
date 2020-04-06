@@ -1,0 +1,27 @@
+package apresentacao;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class Painel extends JPanel {
+	private static final long serialVersionUID = 1L;
+
+	public void paint(Graphics g) {
+		//Casa
+		g.setColor(Color.black);
+		//Paredes Frente
+		g.drawLine(100, 300, 100, 500);
+		g.drawLine(300, 300, 300, 500);
+		g.drawLine(100, 300, 300, 300);
+		g.drawLine(100, 500, 300, 500);
+		
+		//Telhado frente
+		g.drawLine(205, 150, 100, 300);
+		g.drawLine(205, 150, 300, 300);
+		
+		//Telhado Atrás
+		g.drawLine(205, 150, 475, 100);
+	}
+}

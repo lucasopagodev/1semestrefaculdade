@@ -1,0 +1,12 @@
+
+public class NADA {
+	public static void main(String[] args) {
+		
+		String name = "";
+		
+		
+		
+		System.out.println("Ola Bolinha" + name);
+		
+	}
+}

@@ -1,0 +1,52 @@
+package apresentacao;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
+public class AcaoConfirmar implements ActionListener{
+	private JCheckBox chkRadio = null;
+	private JCheckBox chkRodaDeLigaLeve = null;
+	private JCheckBox chkCameraDeRe = null;
+	private JCheckBox chkFarolDeNeon = null;
+	
+	public AcaoConfirmar(JCheckBox chkRadio, JCheckBox chkRodaDeLigaLeve, JCheckBox chkCameraDeRe,
+			JCheckBox chkFarolDeNeon) {
+		super();
+		this.chkRadio = chkRadio;
+		this.chkRodaDeLigaLeve = chkRodaDeLigaLeve;
+		this.chkCameraDeRe = chkCameraDeRe;
+		this.chkFarolDeNeon = chkFarolDeNeon;
+	}
+	public void actionPerformed(ActionEvent e) {
+		String acessorios = "";
+		boolean escolheuPeloMenosUmAcessorio = false;
+		
+		if (chkRadio.isSelected()) {
+			acessorios += ", Radio";
+			escolheuPeloMenosUmAcessorio = true;
+		}
+		if (chkRodaDeLigaLeve.isSelected()) {
+			acessorios += ", Roda de Liga Leve";
+			escolheuPeloMenosUmAcessorio = true;
+		}
+		if (chkCameraDeRe.isSelected()) {
+			acessorios += ", Câmera de Ré";
+			escolheuPeloMenosUmAcessorio = true;
+		}
+		if (chkFarolDeNeon.isSelected()) {
+			acessorios += ", Farol de Neon";
+			escolheuPeloMenosUmAcessorio = true;
+		}
+		if (! escolheuPeloMenosUmAcessorio) {
+			acessorios = "Carro de Pobre !!!!";
+		}else {
+			acessorios = "Lista de Acessórios: " + acessorios.substring(2);
+		}
+		
+		JOptionPane.showMessageDialog(null, acessorios);
+	}
+
+}

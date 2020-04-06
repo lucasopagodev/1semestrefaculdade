@@ -1,0 +1,29 @@
+package apresentacao;
+
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class JanelaPrincipalCal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	public static void main(String[] args) {
+		JanelaPrincipalCal objeto = new JanelaPrincipalCal();
+		objeto.setVisible(true);
+	}
+	
+	public JanelaPrincipalCal() {
+		setTitle("Calculadora");
+		setSize(340, 540);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setIcon();
+		
+	}
+	
+	//Metodo para colocar icone na janela.
+	private void setIcon() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("IconCalculadora.png")));
+	}
+	
+}

@@ -1,0 +1,42 @@
+package apresentacao;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+
+//import javax.swing.JButton;
+import javax.swing.JFrame;
+//import javax.swing.JPanel;
+
+public class JanelaPrincipalCal extends JFrame {
+	private static final long serialVersionUID = 1L;
+	//private JPanel Painel = new JPanel();
+	//private JButton botao1 = new JButton("1");
+	//private JButton botao2 = new JButton("2");
+	//private JButton botao3 = new JButton("3");
+	//private JButton botao4 = new JButton("4");
+	//private JButton botao5 = new JButton("5");
+	//private JButton botao6 = new JButton("6");
+	//private JButton botao7 = new JButton("7");
+	//private JButton botao8 = new JButton("8");
+	//private JButton botao9 = new JButton("9");
+	
+	public static void main(String[] args) {
+		JanelaPrincipalCal objeto = new JanelaPrincipalCal();
+		objeto.setVisible(true);
+	}
+	
+	public JanelaPrincipalCal() {
+		setTitle("Calculadora");
+		setSize(450, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setIcon();
+		getContentPane().setBackground(Color.white);
+		
+	}
+	
+	//Metodo para colocar icone na janela.
+	private void setIcon() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("IconCalculadora.png")));
+	}
+}

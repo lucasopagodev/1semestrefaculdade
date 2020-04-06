@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;l&apos; from expression &apos;resultado=resultado=((x * x) + (3 * x))&apos;&#x0D;&#x0A;- Original project: &apos;Aula 07&apos;&#x0D;&#x0A;- Variable name: &apos;l&apos;&#x0D;&#x0A;- Destination method: &apos;Calculosomatorio.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;resultado=resultado=((x * x) + (3 * x))&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;l&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;{Calculosomatorio.java" name="l" replace="true" selection="163 44" stamp="1554898496776" varType="false" version="1.0"/>
+</session>

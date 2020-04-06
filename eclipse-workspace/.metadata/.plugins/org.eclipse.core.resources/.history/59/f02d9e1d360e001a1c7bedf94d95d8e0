@@ -1,0 +1,69 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class PrototipoDDR1 extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	private JPanel objPainel = new JPanel();
+	
+	private JMenuBar barraDeMenu = new JMenuBar();
+	private JMenu menuCadastro = new JMenu("Cadastro");
+	private JMenuItem itemOrientador = new JMenuItem("Orientador");
+	private JMenuItem itemAluno = new JMenuItem("Aluno");
+	private JMenuItem itemAvaliador = new JMenuItem("Avaliador");
+	private JMenu menuRelatorio = new JMenu("Relatórios");
+	private JMenuItem itemResumo = new JMenuItem("Resumo");
+	
+	private JLabel lblNome = new JLabel("Nome");
+	private JTextField txtNome = new JTextField();
+	
+	private JLabel lblCpf = new JLabel("CPF");
+	private JTextField txtCpf = new JTextField();
+	
+	private JLabel lblDataNascimento = new JLabel("Data de Nascimento");
+	private JTextField txtDataNascimento = new JTextField();
+	
+	private JLabel lblEmail = new JLabel("E-Mail");
+	private JTextField txtEmail = new JTextField();
+	
+	private JLabel lblCelular = new JLabel("Celular");
+	private JTextField txtCelular = new JTextField();
+	
+	
+	public static void main(String[] args) {
+		new PrototipoDDR1().setVisible(true);
+	}
+	
+	public PrototipoDDR1() {
+		setTitle("Universidade de Brasília");
+		setSize(800, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		objPainel.setLayout(null);
+		getContentPane().add(objPainel);
+		
+		lblNome.setBounds(20, 20, 200, 20);
+		objPainel.add(lblNome);
+		
+		txtNome.setBounds(20, 40, 200, 20);
+		objPainel.add(txtNome);
+		
+		lblCpf.setBounds(20, 20, 200, 20);
+		objPainel.add(lblCpf);
+		
+		txtCpf.setBounds(20, 40, 200, 20);
+		objPainel.add(txtCpf);
+		
+		lblNome.setBounds(20, 20, 200, 20);
+		objPainel.add(lblNome);
+		
+		txtNome.setBounds(20, 40, 200, 20);
+		objPainel.add(txtNome);
+	}
+}

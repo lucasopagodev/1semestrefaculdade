@@ -1,0 +1,18 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class Tela extends JFrame {
+	private static final long serialVersionUID = 1L;
+	public static void main(String[] args) {
+		Tela objeto = new Tela();
+		objeto.setVisible(true);
+	}
+	public Tela() {
+		setSize(800,600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		JOptionPane.showMessageDialog(null, "HELLO!!");
+		
+		Painel2 objPainel = new Painel2();
+		add(objPainel2);
+	}
+}

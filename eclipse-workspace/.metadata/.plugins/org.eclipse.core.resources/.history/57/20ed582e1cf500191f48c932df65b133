@@ -1,0 +1,42 @@
+package apresentacao;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Janela extends JFrame{
+	private static final long serialVersionUID = 1L;
+
+	private JPanel objPainel = new JPanel();
+	private JLabel lblAcessorios = new JLabel("Acessórios");
+	private JCheckBox chkRadio = new JCheckBox();
+	private JCheckBox chkRodaDeLigaLeve = new JCheckBox();
+	private JCheckBox chkCameraDeRe = new JCheckBox();
+	private JCheckBox chkFarolDeNeon = new JCheckBox();
+	private JButton btnConfirmar = new JButton();
+	private JButton btnSair = new JButton();
+	
+	public static void main(String[] args) {
+		new Janela().setVisible(true);
+	}
+	
+	public Janela() {
+		setTitle("Janela de Configuração de Veículos");
+		setSize(800, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		objPainel.setLayout(null);
+		getContentPane().add(objPainel);
+		
+		lblAcessorios.setBounds(30, 30, 200, 20);
+		objPainel.add(lblAcessorios);
+		
+		chkRadio.setBounds(30, 50, 200, 20);
+		objPainel.add(chkRadio);
+		
+	}
+	
+}

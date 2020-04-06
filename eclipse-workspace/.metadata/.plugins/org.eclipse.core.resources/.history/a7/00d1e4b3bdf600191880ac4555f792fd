@@ -1,0 +1,8 @@
+package negocio;
+
+public class Pessoa {
+	private String nome = "";
+	private String sexo = "";
+	private String endereco = "";
+	private UF objUF = null; 
+}

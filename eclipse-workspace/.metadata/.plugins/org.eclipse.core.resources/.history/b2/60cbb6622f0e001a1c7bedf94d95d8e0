@@ -1,0 +1,41 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class PrototipoDDR1 extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	private JPanel objPainel = new JPanel();
+	
+	private JLabel lblNome = new JLabel("Nome");
+	private JTextField txtNome = new JTextField();
+	
+	private JLabel lblCpf = new JLabel("CPF");
+	private JTextField txtCpf = new JTextField();
+	
+	private JLabel lblDataNascimento = new JLabel("Data de Nascimento");
+	private JTextField txtDataNascimento = new JTextField();
+	
+	private JLabel lblEmail = new JLabel("E-Mail");
+	private JTextField txtEmail = new JTextField();
+	
+	private JLabel lblCelular = new JLabel("Celular");
+	private JTextField txtCelular = new JTextField();
+	
+	
+	public static void main(String[] args) {
+		new PrototipoDDR1().setVisible(true);
+	}
+	
+	public PrototipoDDR1() {
+		setTitle("Universidade de Brasília");
+		setSize(800, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+		objPainel.setLayout(null);
+		getContentPane().add(objPainel);
+		
+	}
+}

@@ -1,0 +1,11 @@
+package apresentacao;
+
+import javax.swing.JPanel;
+
+public class Painel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
+	public void JButton() {
+		setSize(40, 30);
+	}
+}

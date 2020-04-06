@@ -1,0 +1,54 @@
+package negocio;
+
+public class Pessoa {
+	private String nome = "";
+	private boolean sexo = false;
+	private String endereco = "";
+	private UF objUF = null;
+	
+	public Pessoa() {
+		super();
+	}
+
+	public Pessoa(String nome, boolean sexo, String endereco, UF objUF) {
+		super();
+		this.nome = nome;
+		this.sexo = sexo;
+		this.endereco = endereco;
+		this.objUF = objUF;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(boolean sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public UF getObjUF() {
+		return objUF;
+	}
+
+	public void setObjUF(UF objUF) {
+		this.objUF = objUF;
+	} 
+	
+	
+}

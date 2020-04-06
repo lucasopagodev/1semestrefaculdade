@@ -1,0 +1,41 @@
+package apresentacao;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Janela extends JFrame {
+	private JPanel objPainel = new JPanel();
+	
+	private JLabel lblCodigo = new JLabel();
+	private JTextField txtCodigo = new JTextField();
+	
+	private JLabel lblDescricao = new JLabel();
+	private JTextArea txaDescricao = new JTextArea();
+	private JScrollPane jspBarra = new JScrollPane(txaDescricao);
+	
+	private JLabel lblPreco = new JLabel();
+	private JTextField txtPreco = new JTextField();
+	
+	private JLabel lblCategoria = new JLabel();
+	private JComboBox<String> cboCategoria = new JComboBox<String>();
+	
+	private JCheckBox chkPerecivel = new JCheckBox("Perecivel");
+	
+	private JButton btnGravar = new JButton();
+	private JButton btnLimpar = new JButton();
+	private JButton btnSair = new JButton();
+	
+	private static final long serialVersionUID = 1L;
+	
+	public static void main(String[] args) {
+		new Janela().setVisible(true);
+	}
+	
+}
